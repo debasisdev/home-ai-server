@@ -14,6 +14,8 @@ services:
       - STORE_MODEL_IN_DB=True
     depends_on:
       - litellm_db
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:4000/health/liveliness || exit 1"]
       interval: 30s
@@ -58,14 +60,12 @@ services:
       - IMAGE_GENERATION_ENGINE=automatic1111
       - IMAGE_SIZE=1024x768
       - IMAGE_STEPS=5
-      - IMAGE_GENERATION_MODEL='Juggernaut-XI-Lightning.safetensors [7782222e93]'
+      - IMAGE_GENERATION_MODEL=Juggernaut-XI-Lightning.safetensors [7782222e93]
       - AUTOMATIC1111_BASE_URL=http://host.docker.internal:7860
       - AUTOMATIC1111_CFG_SCALE=1.5
-      - AUTOMATIC1111_SAMPLER='DPM++ SDE'
+      - AUTOMATIC1111_SAMPLER=DPM++ SDE
       - AUTOMATIC1111_SCHEDULER=Karras
     restart: unless-stopped
-    depends_on:
-      - litellm
       
 volumes:
   postgres_data:

@@ -12,7 +12,8 @@ model_list:
       input_cost_per_token: 0
       output_cost_per_token: 0
     litellm_params:
-      model: lm_studio/phi-4-abliterated
+      model: openai/phi-4-abliterated
+      api_base: http://host.docker.internal:1234/v1
       api_key: os.environ/LMSTUDIO_API_KEY
 
   - model_name: gemma-3-4b
@@ -20,7 +21,8 @@ model_list:
       input_cost_per_token: 0
       output_cost_per_token: 0
     litellm_params:
-      model: lm_studio/mlabonne_gemma-3-4b-it-abliterated
+      model: openai/mlabonne_gemma-3-4b-it-abliterated
+      api_base: http://host.docker.internal:1234/v1
       api_key: os.environ/LMSTUDIO_API_KEY
 
 general_settings:
