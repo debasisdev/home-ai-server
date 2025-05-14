@@ -9,11 +9,8 @@ services:
     volumes:
       - ./config.yaml:/app/config.yaml
     command: [ "--config", "/app/config.yaml", "--port", "4000", "--num_workers", "8" ]
-    networks:
-      - proxy
-      - internal
     environment:
-      - DATABASE_URL=postgresql://${LITELLM_POSTGRES_USER}:${LITELLM_POSTGRES_PASSWORD}@litellm_db:5432/litellm
+      - DATABASE_URL=postgresql://llmproxy:${LITELLM_POSTGRES_PASSWORD}@litellm_db:5432/litellm
     depends_on:
       - litellm_db
     healthcheck:
@@ -32,11 +29,9 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
     environment:
-      - POSTGRES_USER=${LITELLM_POSTGRES_USER}
+      - POSTGRES_DB=litellm
+      - POSTGRES_USER=llmproxy
       - POSTGRES_PASSWORD=${LITELLM_POSTGRES_PASSWORD}
-      - POSTGRES_DB=${LITELLM_POSTGRES_DB}
-    networks:
-      - internal
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -d litellm -U llmproxy"]
       interval: 10s
@@ -56,17 +51,9 @@ services:
     env_file:
       - .env
     restart: unless-stopped
-    networks:
-      - proxy
-      - internal
     depends_on:
       - litellm
-
-networks:
-  proxy:
-    external: true
-  internal:
-
+      
 volumes:
   postgres_data:
     name: litellm_postgres_data
