@@ -4,10 +4,13 @@ model_list:
       input_cost_per_token: 0.4e-6
       output_cost_per_token: 1.6e-6
       cache_read_input_token_cost: 0.1e-6
-      max_tokens: 2048
     litellm_params:
       model: gpt-4.1-mini
       api_key: os.environ/CHATGPT_API_KEY
+      max_tokens: 2048
+      temperature: 1.0
+      top_p: 0.9
+      frequency_penalty: 1.0
       rpm: 5
   
   - model_name: phi-4-14b
