@@ -4,10 +4,14 @@ This project sets up an Open WebUI interface with LiteLLM as a backend proxy for
 
 ## Prerequisites
 
--   Docker and Docker Compose installed on your system
--   API keys for the AI models you want to use
+- Docker and Docker Compose installed on your system
+- API keys for the AI models (OpenAI, LM Studio) you want to use
+- Automatic1111 and SDXL setup on your system (No advantage in running inside docker in Apple Silicon)
+- Cloudflare Tunnel to Expose Internet Traffic
 
 ## Configuration
+
+![](./setup-excali.svg)
 
 1. Create a `.env` file in the project root with the following content from `example.env`:
 
