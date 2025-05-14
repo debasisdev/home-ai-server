@@ -7,6 +7,9 @@ This project sets up an Open WebUI interface with LiteLLM as a backend proxy for
 - Docker and Docker Compose installed on your system
 - API keys for the AI models (OpenAI, LM Studio) you want to use
 - Automatic1111 and SDXL setup on your system (No advantage in running inside docker in Apple Silicon)
+    ```bash
+    ./webui.sh --listen --opt-split-attention-v1 --api
+    ```
 - Cloudflare Tunnel to Expose Internet Traffic
 
 ## Configuration
@@ -45,5 +48,5 @@ This project sets up an Open WebUI interface with LiteLLM as a backend proxy for
 The following models are configured in `config.yml`:
 
 -   [gpt-4.1-mini](https://platform.openai.com/docs/models/gpt-4.1-mini)
--   [mlabonne_gemma-3-4b-it-abliterated](https://huggingface.co/bartowski/mlabonne_gemma-3-4b-it-abliterated-GGUF):Q4_K_S
+-   [mlabonne_gemma-3-4b-it-abliterated:Q4_K_S](https://huggingface.co/bartowski/mlabonne_gemma-3-4b-it-abliterated-GGUF)
 -   [phi-4-abliterated](https://huggingface.co/mlx-community/phi-4-3bit)
