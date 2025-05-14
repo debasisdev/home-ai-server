@@ -1,6 +1,6 @@
 # Open WebUI with LiteLLM Setup
 
-This project sets up an Open WebUI interface with LiteLLM as a backend proxy for LM Studio, Stable Diffusion (Automatic 1111) and OpenAI Models. It uses Docker Compose to orchestrate the services.
+This project sets up an Open WebUI interface with LiteLLM as a backend proxy for [LM Studio](https://lmstudio.ai/), [Automatic 1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui), and OpenAI Models. It uses Docker Compose to orchestrate the services.
 
 ## Prerequisites
 
@@ -44,6 +44,6 @@ This project sets up an Open WebUI interface with LiteLLM as a backend proxy for
 
 The following models are configured in `config.yml`:
 
--   gpt-4.1-mini (OpenAI)
--   mlabonne_gemma-3-4b-it-abliterated (LM Studio)
--   phi-4-abliterated (LM Studio)
+-   [gpt-4.1-mini](https://platform.openai.com/docs/models/gpt-4.1-mini)
+-   [mlabonne_gemma-3-4b-it-abliterated](https://huggingface.co/bartowski/mlabonne_gemma-3-4b-it-abliterated-GGUF)
+-   [phi-4-abliterated] (https://huggingface.co/mlx-community/phi-4-3bit)
