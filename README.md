@@ -1,12 +1,13 @@
 # Open WebUI with LiteLLM Setup
 
-This project sets up an Open WebUI interface with LiteLLM as a backend proxy for [LM Studio](https://lmstudio.ai/), [Automatic 1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui), and OpenAI Models. It uses Docker Compose to orchestrate the services.
+This project sets up an Open WebUI interface with LiteLLM as a backend proxy for [LM Studio](https://lmstudio.ai/), [Automatic1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui), and OpenAI Models. It uses Docker Compose to orchestrate the services.
 
 ## Prerequisites
 
 - Docker and Docker Compose installed on your system
+- Local models running in local LM Studio at `http://localhost:1234`
 - API keys for the AI models (OpenAI, LM Studio) you want to use
-- Automatic1111 and SDXL setup on your system (No advantage in running inside docker in Apple Silicon)
+- Automatic1111 and SDXL setup on your system at `http://localhost:7860`
     ```bash
     ./webui.sh --listen --opt-split-attention-v1 --api
     ```
