@@ -46,4 +46,4 @@ The following models are configured in `config.yml`:
 
 -   [gpt-4.1-mini](https://platform.openai.com/docs/models/gpt-4.1-mini)
 -   [mlabonne_gemma-3-4b-it-abliterated](https://huggingface.co/bartowski/mlabonne_gemma-3-4b-it-abliterated-GGUF)
--   [phi-4-abliterated] (https://huggingface.co/mlx-community/phi-4-3bit)
+-   [phi-4-abliterated](https://huggingface.co/mlx-community/phi-4-3bit)
