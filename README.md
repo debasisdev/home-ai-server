@@ -45,7 +45,7 @@ This project sets up an Open WebUI interface with LiteLLM as a backend proxy for
 
 ## Available Models
 
-The following models are configured in `config.yml`:
+The following models are configured in `config.yaml`:
 
 -   [gpt-4.1-mini](https://platform.openai.com/docs/models/gpt-4.1-mini)
 -   [mlabonne_gemma-3-4b-it-abliterated:Q4_K_S](https://huggingface.co/bartowski/mlabonne_gemma-3-4b-it-abliterated-GGUF)
