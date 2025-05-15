@@ -1,15 +1,15 @@
 # Open WebUI with LiteLLM Setup
 
-This project sets up an Open WebUI interface with LiteLLM as a backend proxy for [LM Studio](https://lmstudio.ai/), [Automatic1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui), and OpenAI Models. It uses Docker Compose to orchestrate the services.
+This project sets up an Open WebUI interface with LiteLLM as a backend proxy for [LM Studio](https://lmstudio.ai/), [ComfyUI](https://github.com/comfyanonymous/ComfyUI), and [OpenAI Models](https://platform.openai.com/docs/models). It uses Docker Compose to orchestrate the services.
 
 ## Prerequisites
 
 - Docker and Docker Compose installed on your system
-- Local models running in local LM Studio at `http://localhost:1234`
 - API keys for the AI models (OpenAI, LM Studio) you want to use
-- Automatic1111 and SDXL setup on your system at `http://localhost:7860`
+- Local models running in local LM Studio at `http://localhost:1234` (optional)
+- ComfyUI and SDXL (epicrealismXL) setup on your system at `http://localhost:8188` (optional)
     ```bash
-    ./webui.sh --listen --opt-split-attention-v1 --api
+    python main.py --listen 0.0.0.0 --use-split-cross-attention
     ```
 - Cloudflare Tunnel to Expose Internet Traffic
 

@@ -54,17 +54,14 @@ services:
       - .env
     environment:
       - OPENAI_API_BASE_URL=http://host.docker.internal:4000/v1
+      - COMFYUI_BASE_URL=http://host.docker.internal:8188
       - DEFAULT_MODELS=gpt-4.1-mini
+      - IMAGE_GENERATION_MODEL=epicrealismXL_VXIAbeast4SLightning.safetensors
       - ENABLE_OLLAMA_API=False
       - ENABLE_IMAGE_GENERATION=True
-      - IMAGE_GENERATION_ENGINE=automatic1111
+      - IMAGE_GENERATION_ENGINE=comfyui
       - IMAGE_SIZE=1024x768
-      - IMAGE_STEPS=5
-      - IMAGE_GENERATION_MODEL=Juggernaut-XI-Lightning.safetensors [7782222e93]
-      - AUTOMATIC1111_BASE_URL=http://host.docker.internal:7860
-      - AUTOMATIC1111_CFG_SCALE=1.5
-      - AUTOMATIC1111_SAMPLER=DPM++ SDE
-      - AUTOMATIC1111_SCHEDULER=Karras
+      - IMAGE_STEPS=4
     restart: unless-stopped
       
 volumes:
